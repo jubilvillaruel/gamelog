@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react"; 
+import { inputStyle } from "@/styles/style";
 
 type Props = {
     label: string;
@@ -17,7 +18,7 @@ export default function FormInput({type, label, name, value, onChange}: Props) {
             <input
                 type={type}
                 name={name}
-                className="w-full px-4 py-2 bg-[#1a1a1a] text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0FAC7D]"
+                className={inputStyle}
                 value={value}
                 onChange={onChange}
             />
