@@ -2,10 +2,8 @@ import React from 'react'
 import { redirect } from 'next/navigation';
 import { createSupabaseServerClient } from '@/lib/supabaseServer';
 import Sidebar from '@/components/Sidebar';
-// import { cookies } from 'next/headers';
 
-
-export default async function dashboardPage() {
+export default async function profilePage() {
     const supabase = createSupabaseServerClient();
     const {
         data: { session },
@@ -20,8 +18,8 @@ export default async function dashboardPage() {
             </div>
 
             <div className='flex-1 p-10'>
-                <h1 className='text-3xl font-bold mb-6'>Dashboard</h1>
-                <p>Welcome to your dashboard!</p>
+                <h1 className='text-3xl font-bold mb-6'>Profile</h1>
+                <p>Welcome to your profile!</p>
             </div>
         </div>
     )

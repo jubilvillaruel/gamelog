@@ -4,11 +4,9 @@ import FormInput from '@/components/FormInput';
 import React from 'react';
 import { useState } from 'react';
 import { handleLogin } from '@/app/login/action';
-// import { redirect } from 'next/dist/server/api-utils';
 import { redirect } from 'next/navigation';
 
-
-export default function LoginPage() {
+export default function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");  
 
@@ -48,7 +46,7 @@ export default function LoginPage() {
         redirect('/dashboard');
     }
         
-
+    
     return (
         <div className="min-h-screen flex items-center justify-center">
                     <div className="w-full max-w-md mx-auto p-6 bg-[#1a1a1a] rounded-lg shadow-md">
