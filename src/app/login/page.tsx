@@ -4,6 +4,9 @@ import FormInput from '@/components/FormInput';
 import React from 'react';
 import { useState } from 'react';
 import { handleLogin } from '@/app/login/action';
+// import { redirect } from 'next/dist/server/api-utils';
+import { redirect } from 'next/navigation';
+
 
 export default function LoginPage() {
     const [email, setEmail] = useState("");
@@ -41,6 +44,8 @@ export default function LoginPage() {
 
         alert('Login successful!'); // Handle success, e.g., redirect or show a message
         console.log(data);
+        console.log(data?.session?.access_token);
+        redirect('/dashboard');
     }
         
 
