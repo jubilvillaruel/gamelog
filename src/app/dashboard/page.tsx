@@ -2,8 +2,6 @@ import React from 'react'
 import { redirect } from 'next/navigation';
 import { createSupabaseServerClient } from '@/lib/supabaseServer';
 import Sidebar from '@/components/Sidebar';
-// import { cookies } from 'next/headers';
-
 
 export default async function dashboardPage() {
     const supabase = createSupabaseServerClient();
